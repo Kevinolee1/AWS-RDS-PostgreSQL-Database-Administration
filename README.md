@@ -49,7 +49,7 @@ PostgreSQL returned `CREATE TABLE`, confirming that the table was successfully c
 
 ## Step 6 – Verify the Employees Table
 
-![Verify Employees Table](images/06-verify-employees-table.png)
+![Verify Employees Table](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/a4e4aac69750c452ee373152749663d39c85e14b/Screenshot%202026-10-05%20134037.png)
 
 **Figure 6 – Verifying the Employees Table:** After creating the `employees` table, I used the PostgreSQL `\dt` command to list the tables within the `companydb` database.
 
