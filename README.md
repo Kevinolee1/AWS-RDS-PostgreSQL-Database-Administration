@@ -67,7 +67,7 @@ This verification confirmed that the table schema and constraints were configure
 
 ## Step 8 – Insert Employee Records
 
-![Insert Employee Records](images/08-insert-employee-records.png)
+![Insert Employee Records](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/3f1e384174dfa82d99c6782c04e4631db6ad7807/Screenshot%202026-10-05%20134213.png)
 
 **Figure 8 – Populating the Employees Table:** I used an SQL `INSERT INTO` statement to add five sample employee records to the `employees` table.
 
