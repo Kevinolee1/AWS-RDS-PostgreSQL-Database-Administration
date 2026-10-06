@@ -87,7 +87,7 @@ The automatically generated employee IDs and hire dates also confirmed that the 
 
 ## Step 10 – Create a PostgreSQL Login Role
 
-![Create Reporting User](images/10-create-reporting-user.png)
+![Create Reporting User](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/c4050ed34412c216e6eac28414b3125d4d4231c1/Screenshot%202026-10-05%20134402.png)
 
 **Figure 10 – Creating a Database Login Role:** I created a PostgreSQL role named `reporting_user` with login capability to establish a separate database account for reporting access.
 
