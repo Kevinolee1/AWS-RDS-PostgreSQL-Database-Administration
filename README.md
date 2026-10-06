@@ -122,3 +122,54 @@ This verification confirmed that the reporting account was restricted to reading
 **Figure 13 – Verifying the Reporting User Account:** I queried the PostgreSQL `pg_roles` system catalog to verify that the `reporting_user` role was successfully created and configured for authentication.
 
 The query returned `rolcanlogin = true`, confirming that `reporting_user` is a login-enabled PostgreSQL role. This verified the account configuration before testing authentication and its assigned read-only permissions.
+
+## Step 14 – Validate Read-Only User Access
+
+![Validate Reporting User Access](images/14-validate-reporting-user-access.png)
+
+**Figure 14 – Validating Authorized Read Access:** I authenticated to the PostgreSQL database using the restricted `reporting_user` account and ran `SELECT current_user;` to verify the active database identity.
+
+The result confirmed that the session was operating as `reporting_user`. I then queried the `employees` table and successfully retrieved all five records, confirming that the account's assigned `SELECT` permission was functioning correctly.
+
+This validated that the reporting account could access the data required for its role without using the administrative `postgres` account.
+
+## Step 15 – Validate Least-Privilege Enforcement
+
+![Validate Least Privilege](images/15-validate-least-privilege.png)
+
+**Figure 15 – Validating Least-Privilege Enforcement:** While authenticated as the restricted `reporting_user` account, I attempted to update an employee record in the `employees` table.
+
+PostgreSQL returned `ERROR: permission denied for table employees`, confirming that the account did not have `UPDATE` privileges.
+
+This test verified that the least-privilege access model was functioning as intended: `reporting_user` could read data for reporting purposes but could not modify employee records.
+
+## Step 16 – Create and Verify the Application User
+
+![Create Application User](images/16-create-app-user.png)
+
+**Figure 16 – Creating the Application Database Role:** I created a PostgreSQL role named `app_user` with login capability to provide a separate account for application-level database operations.
+
+After creating the role, I queried the PostgreSQL `pg_roles` system catalog to verify its configuration. The `rolcanlogin` value returned `true`, confirming that `app_user` was successfully created as a login-enabled role.
+
+The password has been redacted from the screenshot to prevent credentials from being exposed in the public repository.
+
+## Step 17 – Configure Application User Permissions
+
+![Configure Application User Permissions](images/17-app-user-permissions.png)
+
+**Figure 17 – Configuring Role-Based Application Access:** I granted the `app_user` role permission to connect to `companydb`, access the `public` schema, and perform `SELECT`, `INSERT`, and `UPDATE` operations on the `employees` table.
+
+I also granted access to the `employees_employee_id_seq` sequence so the application account could create new employee records using automatically generated employee IDs.
+
+I then used `\dp employees` to verify the table privileges. The results confirmed that `reporting_user` remained restricted to read-only access while `app_user` received controlled read and write permissions.
+
+## Step 18 – Validate Application User Write Access
+
+![Validate Application User Access](images/18-validate-app-user-access.png)
+
+**Figure 18 – Validating Application User Permissions:** I authenticated to the PostgreSQL database using the `app_user` account and verified the active identity with `SELECT current_user;`.
+
+I then inserted a new employee record into the `employees` table. PostgreSQL returned `INSERT 0 1`, confirming that the account's assigned `INSERT` permission was functioning correctly.
+
+Finally, I queried the newly created record and confirmed that the data was successfully stored. This validated that `app_user` could perform its authorized application-level database operations while remaining separate from the administrative `postgres` account.
+
