@@ -165,7 +165,7 @@ I then used `\dp employees` to verify the table privileges. The results confirme
 
 ## Step 18 – Validate Application User Write Access
 
-![Validate Application User Access](images/18-validate-app-user-access.png)
+![Validate Application User Access](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/d8e68b58389288e829cab60454ef38ac01f5c6b3/Screenshot%202026-10-06%20135312.png)
 
 **Figure 18 – Validating Application User Permissions:** I authenticated to the PostgreSQL database using the `app_user` account and verified the active identity with `SELECT current_user;`.
 
