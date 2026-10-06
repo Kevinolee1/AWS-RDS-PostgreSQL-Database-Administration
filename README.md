@@ -117,7 +117,7 @@ This verification confirmed that the reporting account was restricted to reading
 
 ## Step 13 – Verify the Reporting User Login Role
 
-![Verify Reporting User](images/13-verify-reporting-user.png)
+![Verify Reporting User](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/ed329b08607a24741731d3a88770ad194df24632/Screenshot%202026-10-05%20134800.png)
 
 **Figure 13 – Verifying the Reporting User Account:** I queried the PostgreSQL `pg_roles` system catalog to verify that the `reporting_user` role was successfully created and configured for authentication.
 
