@@ -145,7 +145,7 @@ This test verified that the least-privilege access model was functioning as inte
 
 ## Step 16 – Create and Verify the Application User
 
-![Create Application User](images/16-create-app-user.png)
+![Create Application User](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/9a82e49a71348afe0526139d8ac93d98fb424175/Screenshot%202026-10-06%20134423.png)
 
 **Figure 16 – Creating the Application Database Role:** I created a PostgreSQL role named `app_user` with login capability to provide a separate account for application-level database operations.
 
@@ -172,4 +172,3 @@ I then used `\dp employees` to verify the table privileges. The results confirme
 I then inserted a new employee record into the `employees` table. PostgreSQL returned `INSERT 0 1`, confirming that the account's assigned `INSERT` permission was functioning correctly.
 
 Finally, I queried the newly created record and confirmed that the data was successfully stored. This validated that `app_user` could perform its authorized application-level database operations while remaining separate from the administrative `postgres` account.
-
