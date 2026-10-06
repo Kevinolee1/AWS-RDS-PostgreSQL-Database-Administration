@@ -172,3 +172,25 @@ I then used `\dp employees` to verify the table privileges. The results confirme
 I then inserted a new employee record into the `employees` table. PostgreSQL returned `INSERT 0 1`, confirming that the account's assigned `INSERT` permission was functioning correctly.
 
 Finally, I queried the newly created record and confirmed that the data was successfully stored. This validated that `app_user` could perform its authorized application-level database operations while remaining separate from the administrative `postgres` account.
+
+## Step 19 – Monitor Active Database Sessions
+
+![Monitor PostgreSQL Sessions](images/19-monitor-database-sessions.png)
+
+**Figure 19 – Monitoring Active PostgreSQL Sessions:** I queried the PostgreSQL `pg_stat_activity` system view to inspect active connections to the `companydb` database.
+
+The query returned the session process ID, authenticated database user, database name, client address, and connection state. The results confirmed an active administrative connection to the Amazon RDS PostgreSQL database.
+
+The client IP address has been redacted from the screenshot to prevent network information from being exposed in the public repository.
+
+## Step 20 – Final Database Environment Verification
+
+![Final PostgreSQL Environment Verification](images/20-final-database-verification.png)
+
+**Figure 20 – Final Database Environment Verification:** I performed a final review of the PostgreSQL environment to verify the database, table, user roles, and access-control configuration.
+
+The results confirmed that `companydb` was active under the `postgres` administrative account and that the `employees` table was successfully configured in the `public` schema.
+
+I also verified that both `reporting_user` and `app_user` were login-enabled roles. The final privilege review confirmed that `reporting_user` remained restricted to read-only access, while `app_user` had controlled `SELECT`, `INSERT`, and `UPDATE` permissions.
+
+This final validation confirmed that the Amazon RDS PostgreSQL environment was successfully configured with separate administrative, reporting, and application access levels.
