@@ -107,7 +107,7 @@ This configuration applies the principle of least privilege by limiting the acco
 
 ## Step 12 – Verify Least-Privilege Permissions
 
-![Verify Reporting User Permissions](images/12-verify-reporting-user-permissions.png)
+![Verify Reporting User Permissions](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/8c5426911f13e1e20aef371655160af867cf08c0/Screenshot%202026-10-05%20134708.png)
 
 **Figure 12 – Verifying Role-Based Access Permissions:** I used the PostgreSQL `\dp employees` command to review the access privileges configured on the `employees` table.
 
