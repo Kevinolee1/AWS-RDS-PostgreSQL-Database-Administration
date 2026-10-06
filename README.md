@@ -3,7 +3,7 @@ Performed hands-on PostgreSQL administration on Amazon RDS, including database a
 
 ## Step 1 – Connect to the Amazon RDS PostgreSQL Instance
 
-![PostgreSQL RDS Connection](images/01-postgresql-rds-connection.png)
+![PostgreSQL RDS Connection](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/8aac45d2213e16363e9e64f5fbba62dd17534488/Screenshot%202026-10-06%20064203.png)
 
 **Figure 1 – Connecting to PostgreSQL on Amazon RDS:** I used the PostgreSQL `psql` command-line client from Windows PowerShell to establish a remote connection to the `cloud-dba-lab` Amazon RDS PostgreSQL instance.
 
