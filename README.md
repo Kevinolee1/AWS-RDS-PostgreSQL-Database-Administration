@@ -19,7 +19,7 @@ The query confirmed that the RDS instance was running **PostgreSQL 18.3 on a 64-
 
 ## Step 3 – Create and Verify the Application Database
 
-![Create PostgreSQL Database](images/03-create-company-database.png)
+![Create PostgreSQL Database](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/fb1cc3a2c7327152c3f7652ddbb655843d258024/Screenshot%202026-10-05%20133745.png)
 
 **Figure 3 – Creating and Verifying the PostgreSQL Database:** I created a new PostgreSQL database named `companydb` using the `CREATE DATABASE` command.
 
