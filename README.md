@@ -135,7 +135,7 @@ This validated that the reporting account could access the data required for its
 
 ## Step 15 – Validate Least-Privilege Enforcement
 
-![Validate Least Privilege](images/15-validate-least-privilege.png)
+![Validate Least Privilege](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/c13deb302027279bbae22169a09c5d0e7455bec5/Screenshot%202026-10-06%20133602.png)
 
 **Figure 15 – Validating Least-Privilege Enforcement:** While authenticated as the restricted `reporting_user` account, I attempted to update an employee record in the `employees` table.
 
