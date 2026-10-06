@@ -185,7 +185,7 @@ The client IP address has been redacted from the screenshot to prevent network i
 
 ## Step 20 – Final Database Environment Verification
 
-![Final PostgreSQL Environment Verification](images/20-final-database-verification.png)
+![Final PostgreSQL Environment Verification](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/49cdbaba621596f10c5d9f9e5be65aa992d01c91/Screenshot%202026-10-06%20140850.png)
 
 **Figure 20 – Final Database Environment Verification:** I performed a final review of the PostgreSQL environment to verify the database, table, user roles, and access-control configuration.
 
