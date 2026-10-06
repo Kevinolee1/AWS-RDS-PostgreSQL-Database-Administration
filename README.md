@@ -57,7 +57,7 @@ The results confirmed that the `employees` table was successfully created in the
 
 ## Step 7 – Inspect the Employees Table Schema
 
-![Employees Table Schema](images/07-employees-table-schema.png)
+![Employees Table Schema](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/d86b765bb94887811331e774d654835ac6179118/Screenshot%202026-10-05%20134125.png)
 
 **Figure 7 – Inspecting the Employees Table Structure:** I used the PostgreSQL `\d employees` command to inspect the structure of the `employees` table.
 
