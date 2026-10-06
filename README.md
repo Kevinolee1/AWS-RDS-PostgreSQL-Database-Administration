@@ -107,7 +107,7 @@ This configuration applies the principle of least privilege by limiting the acco
 
 ## Step 12 – Verify Least-Privilege Permissions
 
-![Verify Reporting User Permissions](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/8c5426911f13e1e20aef371655160af867cf08c0/Screenshot%202026-10-05%20134708.png)
+![Verify Reporting User Permissions](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/ed329b08607a24741731d3a88770ad194df24632/Screenshot%202026-10-05%20134800.png)
 
 **Figure 12 – Verifying Role-Based Access Permissions:** I used the PostgreSQL `\dp employees` command to review the access privileges configured on the `employees` table.
 
@@ -117,7 +117,7 @@ This verification confirmed that the reporting account was restricted to reading
 
 ## Step 13 – Verify the Reporting User Login Role
 
-![Verify Reporting User](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/ed329b08607a24741731d3a88770ad194df24632/Screenshot%202026-10-05%20134800.png)
+![Verify Reporting User]()
 
 **Figure 13 – Verifying the Reporting User Account:** I queried the PostgreSQL `pg_roles` system catalog to verify that the `reporting_user` role was successfully created and configured for authentication.
 
