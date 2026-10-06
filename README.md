@@ -125,7 +125,7 @@ The query returned `rolcanlogin = true`, confirming that `reporting_user` is a l
 
 ## Step 14 – Validate Read-Only User Access
 
-![Validate Reporting User Access](images/14-validate-reporting-user-access.png)
+![Validate Reporting User Access](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/8be7fca12308f6107ae7ffb730fdce10a38d7a1a/Screenshot%202026-10-06%20083522.png)
 
 **Figure 14 – Validating Authorized Read Access:** I authenticated to the PostgreSQL database using the restricted `reporting_user` account and ran `SELECT current_user;` to verify the active database identity.
 
