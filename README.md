@@ -115,3 +115,10 @@ The results confirmed that the administrative `postgres` role retained full tabl
 
 This verification confirmed that the reporting account was restricted to reading employee data without permissions to insert, update, delete, or administer the table.
 
+## Step 13 – Verify the Reporting User Login Role
+
+![Verify Reporting User](images/13-verify-reporting-user.png)
+
+**Figure 13 – Verifying the Reporting User Account:** I queried the PostgreSQL `pg_roles` system catalog to verify that the `reporting_user` role was successfully created and configured for authentication.
+
+The query returned `rolcanlogin = true`, confirming that `reporting_user` is a login-enabled PostgreSQL role. This verified the account configuration before testing authentication and its assigned read-only permissions.
