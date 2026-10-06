@@ -11,7 +11,7 @@ The connection was established over **TLS 1.3**, providing encrypted communicati
 
 ## Step 2 – Verify the PostgreSQL Server Version
 
-![PostgreSQL Server Version](images/02-postgresql-version.png)
+![PostgreSQL Server Version](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/7aee45684def112fc102efaef3e08e63c7e85b53/Screenshot%202026-10-05%20133640.png)
 
 **Figure 2 – Verifying the PostgreSQL Server Version:** After connecting to the Amazon RDS PostgreSQL instance, I ran the `SELECT version();` command to verify the database engine and server version.
 
