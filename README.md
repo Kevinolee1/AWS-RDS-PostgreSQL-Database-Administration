@@ -29,7 +29,7 @@ This establishes a separate database environment for the application data and su
 
 ## Step 4 – Connect to the Company Database
 
-![Connect to Company Database](images/04-connect-companydb.png)
+![Connect to Company Database](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/a93c28df33bd39675980d7fac1db469d2babe63c/Screenshot%202026-10-05%20133828.png)
 
 **Figure 4 – Connecting to the Application Database:** I used the PostgreSQL `\c companydb` command to switch from the default `postgres` database to the newly created `companydb` database.
 
