@@ -39,7 +39,7 @@ The `companydb=>` prompt confirms that the database is active and ready for sche
 
 ## Step 5 – Create the Employees Table
 
-![Create Employees Table](images/05-create-employees-table.png)
+![Create Employees Table](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/a517f4e6cf8480d8cd90b94d021767d22f8e9ca0/Screenshot%202026-10-05%20133946.png)
 
 **Figure 5 – Creating the Employees Table:** I created an `employees` table inside the `companydb` PostgreSQL database to store structured employee information.
 
