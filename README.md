@@ -46,3 +46,52 @@ The `companydb=>` prompt confirms that the database is active and ready for sche
 The table includes an automatically generated `employee_id` primary key, required first and last name fields, department and job title fields, salary using a decimal data type, and a `hire_date` field that automatically defaults to the current date.
 
 PostgreSQL returned `CREATE TABLE`, confirming that the table was successfully created in the Amazon RDS database.
+
+## Step 6 – Verify the Employees Table
+
+![Verify Employees Table](images/06-verify-employees-table.png)
+
+**Figure 6 – Verifying the Employees Table:** After creating the `employees` table, I used the PostgreSQL `\dt` command to list the tables within the `companydb` database.
+
+The results confirmed that the `employees` table was successfully created in the `public` schema and is owned by the `postgres` administrative user. This verification ensured that the table was available before continuing with additional schema and data administration tasks.
+
+## Step 7 – Inspect the Employees Table Schema
+
+![Employees Table Schema](images/07-employees-table-schema.png)
+
+**Figure 7 – Inspecting the Employees Table Structure:** I used the PostgreSQL `\d employees` command to inspect the structure of the `employees` table.
+
+The output verified the configured columns and data types, including integer, variable-length character, numeric, and date fields. It also confirmed the `NOT NULL` constraints on required employee information, the `CURRENT_DATE` default for `hire_date`, and the primary key index on `employee_id`.
+
+This verification confirmed that the table schema and constraints were configured correctly before inserting employee records.
+
+## Step 8 – Insert Employee Records
+
+![Insert Employee Records](images/08-insert-employee-records.png)
+
+**Figure 8 – Populating the Employees Table:** I used an SQL `INSERT INTO` statement to add five sample employee records to the `employees` table.
+
+The records represent multiple departments and job roles with corresponding salary information. PostgreSQL returned `INSERT 0 5`, confirming that all five records were successfully inserted into the Amazon RDS PostgreSQL database.
+
+This populated the table with sample data that could be used for querying and additional database administration tasks.
+
+## Step 9 – Query and Verify Employee Records
+
+![Query Employee Records](images/09-query-employee-records.png)
+
+**Figure 9 – Querying Employee Data:** I used the SQL `SELECT * FROM employees;` statement to retrieve all records stored in the `employees` table.
+
+The query returned all five employee records with their employee IDs, names, departments, job titles, salaries, and hire dates. This confirmed that the previous `INSERT` operation successfully stored the records and that the data could be retrieved from the Amazon RDS PostgreSQL database.
+
+The automatically generated employee IDs and hire dates also confirmed that the primary key sequence and `CURRENT_DATE` default were functioning as configured.
+
+## Step 10 – Create a PostgreSQL Login Role
+
+![Create Reporting User](images/10-create-reporting-user.png)
+
+**Figure 10 – Creating a Database Login Role:** I created a PostgreSQL role named `reporting_user` with login capability to establish a separate database account for reporting access.
+
+Rather than using the administrative `postgres` account for routine database access, the new role provides a dedicated identity that can be assigned only the permissions required for its function.
+
+The password has been redacted from the screenshot to prevent credentials from being exposed in the public repository.
+
