@@ -175,7 +175,7 @@ Finally, I queried the newly created record and confirmed that the data was succ
 
 ## Step 19 – Monitor Active Database Sessions
 
-![Monitor PostgreSQL Sessions](images/19-monitor-database-sessions.png)
+![Monitor PostgreSQL Sessions](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/a0bc6542c35d621984c4085318a3a9714558cfe4/Screenshot%202026-10-06%20140334.png)
 
 **Figure 19 – Monitoring Active PostgreSQL Sessions:** I queried the PostgreSQL `pg_stat_activity` system view to inspect active connections to the `companydb` database.
 
