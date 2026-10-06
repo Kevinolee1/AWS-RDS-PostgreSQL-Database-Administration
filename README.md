@@ -77,7 +77,7 @@ This populated the table with sample data that could be used for querying and ad
 
 ## Step 9 – Query and Verify Employee Records
 
-![Query Employee Records](images/09-query-employee-records.png)
+![Query Employee Records](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/d885dca8b62bf6e95b17e4283c3589a0b7c4beb9/Screenshot%202026-10-05%20134239.png)
 
 **Figure 9 – Querying Employee Data:** I used the SQL `SELECT * FROM employees;` statement to retrieve all records stored in the `employees` table.
 
