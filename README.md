@@ -95,3 +95,23 @@ Rather than using the administrative `postgres` account for routine database acc
 
 The password has been redacted from the screenshot to prevent credentials from being exposed in the public repository.
 
+## Step 11 – Configure Least-Privilege Database Access
+
+![Configure Reporting User Permissions](images/11-reporting-user-permissions.png)
+
+**Figure 11 – Configuring Least-Privilege Access:** I configured the `reporting_user` role with limited permissions based on its reporting function.
+
+I granted the role permission to connect to `companydb`, access the `public` schema, and perform `SELECT` operations on the `employees` table. These permissions allow the reporting account to read employee data without granting administrative or data-modification privileges.
+
+This configuration applies the principle of least privilege by limiting the account to only the database resources and operations required for its intended purpose.
+
+## Step 12 – Verify Least-Privilege Permissions
+
+![Verify Reporting User Permissions](images/12-verify-reporting-user-permissions.png)
+
+**Figure 12 – Verifying Role-Based Access Permissions:** I used the PostgreSQL `\dp employees` command to review the access privileges configured on the `employees` table.
+
+The results confirmed that the administrative `postgres` role retained full table privileges, while `reporting_user` was assigned only the `r` privilege, which represents **SELECT (read-only) access** in PostgreSQL.
+
+This verification confirmed that the reporting account was restricted to reading employee data without permissions to insert, update, delete, or administer the table.
+
