@@ -155,7 +155,7 @@ The password has been redacted from the screenshot to prevent credentials from b
 
 ## Step 17 – Configure Application User Permissions
 
-![Configure Application User Permissions](images/17-app-user-permissions.png)
+![Configure Application User Permissions](https://github.com/Kevinolee1/AWS-RDS-PostgreSQL-Database-Administration/blob/d9a21ca968eaed1019df96e48bc44179d29b0eb8/Screenshot%202026-10-06%20134908.png)
 
 **Figure 17 – Configuring Role-Based Application Access:** I granted the `app_user` role permission to connect to `companydb`, access the `public` schema, and perform `SELECT`, `INSERT`, and `UPDATE` operations on the `employees` table.
 
